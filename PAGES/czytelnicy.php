@@ -23,18 +23,19 @@ $result = mysqli_query($conn, $query);
     <?php
     if (mysqli_num_rows($result) > 0){
         while ($row = mysqli_fetch_assoc($result)) {
+            $plec = $row['Plec'] == 'M' ? 'Mężczyzna' : 'Kobieta';
             echo '<tr> <td>' . $row['Nr_czytelnika'] . '</td><td>'
                 . $row['Nazwisko'] . '</td><td>'
                 . $row['Imie'] . '</td><td>'
                 . $row['Data_ur'] . '</td><td>'
                 . $row['Ulica'] . '</td><td>'
-                . $row['Kod'] . '</td><td>'
+                . SUBSTR($row['Kod'], 0, 2) . '-' . SUBSTR($row['Kod'],2,3).  '</td><td>'
                 . $row['Miasto'] . '</td><td>'
                 . $row['Data_zapisania'] . '</td><td>'
                 . $row['Data_skreslenia'] . '</td><td>'
                 . $row['Nr_legitymacji'] . '</td><td>'
                 . $row['Funkcja'] . '</td><td>'
-                . $row['Plec'] . '</td></tr>';
+                . $plec . '</td></tr>';-
         }
     }
     ?>

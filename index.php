@@ -21,7 +21,7 @@
     <a class="<?= ($_GET['page'] ?? '') == 'ksiazki' ? 'active' : '' ?>" href="?page=ksiazki"> Tabela <i>książki</i> </a>
     <a class="<?= ($_GET['page'] ?? '') == 'pracownicy' ? 'active' : '' ?>" href="?page=pracownicy"> Tabela <i>pracownicy</i> </a>
     <a class="<?= ($_GET['page'] ?? '') == 'stanowiska' ? 'active' : '' ?>" href="?page=stanowiska"> Tabela <i> stanowiska </i> </a>
-    <a class="<?= ($_GET['page'] ?? '') == 'wypozyczenia' ? 'active' : '' ?>" href="?page=wypozyczenia"> Tabela </a>
+    <a class="<?= ($_GET['page'] ?? '') == 'wypozyczenia' ? 'active' : '' ?>" href="?page=wypozyczenia"> Tabela <i> wypożyczenia </i> </a>
 </div>
 
 <div class="content">
