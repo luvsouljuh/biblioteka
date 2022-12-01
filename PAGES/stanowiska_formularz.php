@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
     if ($row) {
+    setcookie("ciastko", json_encode($row), 86400+time(), "maty.com");
         ?>
         <form action="?page=stanowiska_formularz" method="post">
             <table>

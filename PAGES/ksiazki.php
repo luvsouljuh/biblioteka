@@ -2,6 +2,7 @@
 <?php
 $query = ' select * from ksiazki where 1';
 $result = mysqli_query($conn, $query);
+$session['sebix'] = "śmieszek";
 ?>
 <p> Zawiera <?= mysqli_num_rows($result) ?> wierszy </p>
 
@@ -31,6 +32,7 @@ $result = mysqli_query($conn, $query);
                 . $row['Cena'] . '</td><td>'
                 . $row['Id_dzial'] . '</td></tr>';
         }
+        echo $session['sebix'];
     }
     ?>
 </table>

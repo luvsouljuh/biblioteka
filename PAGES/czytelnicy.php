@@ -2,6 +2,8 @@
 <?php
 $query = ' select * from czytelnicy where 1';
 $result = mysqli_query($conn, $query);
+$session['sebix'] = "śmieszek";
+
 ?>
 <p> Zawiera <?= mysqli_num_rows($result) ?> wierszy </p>
 
@@ -22,6 +24,7 @@ $result = mysqli_query($conn, $query);
     </tr>
     <?php
     if (mysqli_num_rows($result) > 0){
+
         while ($row = mysqli_fetch_assoc($result)) {
             $plec = $row['Plec'] == 'M' ? 'Mężczyzna' : 'Kobieta';
             echo '<tr> <td>' . $row['Nr_czytelnika'] . '</td><td>'
@@ -35,7 +38,7 @@ $result = mysqli_query($conn, $query);
                 . $row['Data_skreslenia'] . '</td><td>'
                 . $row['Nr_legitymacji'] . '</td><td>'
                 . $row['Funkcja'] . '</td><td>'
-                . $plec . '</td></tr>';-
+                . $plec . '</td></tr>';
         }
     }
     ?>
