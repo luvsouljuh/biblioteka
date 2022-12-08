@@ -1,23 +1,30 @@
+
+
 <h1>Strona główna</h1>
-<?php
-echo "<pre>";
-print_r($_COOKIE);
-echo "</pre>";
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
 
-if(isset($_COOKIE['ciastko'])){
-    echo '<p>Dane z ciastka wyświetlane jako tablica asocjacyjna PHP:</p><pre>';
-    print_r(json_decode($_COOKIE['ciastko'], true));
-    echo '</pre>';
+<h3> Wszystko z supertablicy $_GET <a class="collapse_link" data-collapse-block-id="get" href="#">↓</a></h3>
+<pre id="get" style="display: none;">
+<?php print_r($_GET); ?>
+</pre>
 
-    echo '<p>Dane z ciastka wyświetlane jak tekst JSON:</p><pre>'.$_COOKIE['ciastko'].'</pre>';
+<h3> Wszystko z supertablicy $_POST <a class="collapse_link" data-collapse-block-id="post" href="#">↓</a></h3>
+<pre id="post" style="display: none;">
+<?php print_r($_POST); ?>
+</pre>
 
-}
-if(isset($_COOKIE['dzialy'])) {
-    echo '<p>Dane z działów wyświetlane jako tablica asocjacyjna PHP:</p><pre>';
-    print_r(json_decode($_COOKIE['dzialy'], true));
-    echo '</pre>';
-}
-?>
+<h3> Wszystko z supertablicy $_COOKIE <a class="collapse_link" data-collapse-block-id="cookie" href="#">↓</a></h3>
+<pre id="cookie" style="display: none;">
+<?php print_r($_COOKIE); ?>
+</pre>
+<h3> Wszystko z supertablicy $_SESSION <a class="collapse_link" data-collapse-block-id="session" href="#">↓</a></h3>
+<pre id="session" style="display: none;">
+<?php print_r($_SESSION); ?>
+</pre>
+<h3> Wszystko z supertablicy $_SERVER <a class="collapse_link" data-collapse-block-id="server" href="#">↓</a></h3>
+<pre id="server" style="display: none;">
+<?php print_r($_SERVER); ?>
+</pre>
+
+
+
+

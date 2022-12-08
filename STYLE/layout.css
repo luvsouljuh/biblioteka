@@ -39,6 +39,7 @@
     padding: 20px;
 }
 
-th, tr, td {
+th, tr, td, table {
     border: 2px solid black;
+    border-collapse: collapse;
 }
